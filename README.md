@@ -10,7 +10,7 @@ Site de downloads do **Voltix** (ferramentas Luau para criadores do Roblox Studi
 ```
 voltix-site/
 ├─ server.js                      servidor + API
-├─ server/reward-verification.js  verificação no servidor (só para anúncio com recompensa)
+├─ reward-verification.js         verificação no servidor (só para anúncio com recompensa)
 ├─ config/
 │  ├─ versions.json               versões publicadas + link do LootLabs ← você edita
 │  └─ site.json                   textos, recursos e requisitos ← você edita

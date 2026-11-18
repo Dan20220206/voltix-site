@@ -19,7 +19,7 @@ const crypto = require('node:crypto');
 const ROOT = __dirname;
 loadEnv(path.join(ROOT, '.env'));
 
-const { verifyRewardCallback } = require('./server/reward-verification');
+const { verifyRewardCallback } = require('./reward-verification');
 
 const PORT = Number(process.env.PORT) || 3000;
 const AD_PROVIDER = (process.env.AD_PROVIDER || 'lootlabs').trim().toLowerCase();

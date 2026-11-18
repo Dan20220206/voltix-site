@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Histórico de versões — Voltix</title>
+  <meta name="description" content="Todas as versões do Voltix e as notas de cada atualização.">
+  <meta name="theme-color" content="#040818">
+  <link rel="icon" href="/img/logo.webp" type="image/webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap topbar__inner">
+      <a class="brand" href="/" aria-label="Voltix — início">
+        <img src="/img/logo.webp" alt="" width="36" height="36">
+        <span>VOLTIX</span>
+      </a>
+      <nav class="nav" aria-label="Principal">
+        <a href="/#recursos">Recursos</a>
+        <a href="/#instalacao">Instalação</a>
+        <a href="/versoes" aria-current="page">Versões</a>
+      </nav>
+      <span class="test-badge" data-test-badge hidden>MODO DE TESTE</span>
+    </div>
+  </header>
+
+  <main class="wrap" id="conteudo">
+    <div class="page-head">
+      <h1>Histórico de versões</h1>
+      <p class="muted">Para baixar a versão atual, use o botão na <a href="/">página inicial</a>.</p>
+    </div>
+    <div id="releases"><p class="muted">Carregando…</p></div>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <span>© <span data-year></span> Voltix. Projeto independente, sem vínculo com a Roblox Corporation.</span>
+      <nav aria-label="Rodapé"><a href="/">Início</a><a href="/privacidade">Privacidade</a></nav>
+    </div>
+  </footer>
+  <script type="module" src="/js/versions.js"></script>
+</body>
+</html>

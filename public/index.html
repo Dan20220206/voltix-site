@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Voltix — Ferramentas Luau para o Roblox Studio</title>
+  <meta name="description" content="Voltix: ferramentas Luau gratuitas para criadores do Roblox Studio. Download grátis, sem cadastro e sem key.">
+  <meta name="theme-color" content="#040818">
+  <meta property="og:title" content="Voltix — Ferramentas Luau para o Roblox Studio">
+  <meta property="og:description" content="Download grátis, sem cadastro e sem key.">
+  <meta property="og:image" content="/img/logo.webp">
+  <link rel="icon" href="/img/logo.webp" type="image/webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <a class="skip" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="topbar">
+    <div class="wrap topbar__inner">
+      <a class="brand" href="/" aria-label="Voltix — início">
+        <img src="/img/logo.webp" alt="" width="36" height="36">
+        <span>VOLTIX</span>
+      </a>
+      <nav class="nav" aria-label="Principal">
+        <a href="#recursos" data-features-link hidden>Recursos</a>
+        <a href="#instalacao">Instalação</a>
+        <a href="/versoes">Versões</a>
+      </nav>
+      <span class="test-badge" data-test-badge hidden>MODO DE TESTE</span>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="wrap hero__grid">
+        <div class="hero__text">
+          <p class="eyebrow">Ferramentas Luau para o Roblox Studio</p>
+          <h1 data-site="title">Voltix</h1>
+          <p class="lead" data-site="tagline">Carregando…</p>
+          <p class="hero__desc" data-site="description"></p>
+
+          <dl class="meta" aria-label="Informações do download">
+            <div><dt>Versão</dt><dd data-current="version">—</dd></div>
+            <div><dt>Tamanho</dt><dd data-current="size">—</dd></div>
+            <div><dt>Publicada em</dt><dd data-current="date">—</dd></div>
+            <div><dt>Arquivo</dt><dd data-current="fileLabel">—</dd></div>
+          </dl>
+
+          <div class="hero__cta">
+            <button class="btn btn--primary btn--lg" id="open-download" type="button" disabled>
+              <svg aria-hidden="true" viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z"/></svg>
+              Baixar Voltix
+            </button>
+            <a class="link" href="/versoes">Histórico de versões →</a>
+          </div>
+          <p class="hero__fine">Grátis · sem cadastro · sem key</p>
+          <p class="notice" id="download-unavailable" hidden>O arquivo desta versão ainda não está disponível. Tente novamente mais tarde.</p>
+        </div>
+
+        <div class="hero__art" aria-hidden="true">
+          <div class="hero__glow"></div>
+          <img src="/img/logo.webp" alt="" width="420" height="420">
+        </div>
+      </div>
+    </section>
+
+    <!-- RECURSOS -->
+    <section class="section" id="recursos" aria-labelledby="recursos-titulo" hidden>
+      <div class="wrap">
+        <h2 id="recursos-titulo">O que o Voltix faz</h2>
+        <div class="features" id="features"></div>
+      </div>
+    </section>
+
+    <!-- REQUISITOS + NOVIDADES -->
+    <section class="section section--alt">
+      <div class="wrap two-col">
+        <div aria-labelledby="req-titulo">
+          <h2 id="req-titulo">Requisitos</h2>
+          <ul class="checklist" id="requirements"></ul>
+        </div>
+        <div aria-labelledby="notas-titulo" id="notes-block" hidden>
+          <h2 id="notas-titulo">Novidades da <span data-current="version">versão atual</span></h2>
+          <ul class="notes" id="current-notes"></ul>
+          <a class="link" href="/versoes">Ver todas as versões →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- INSTALAÇÃO -->
+    <section class="section" id="instalacao" aria-labelledby="inst-titulo">
+      <div class="wrap">
+        <h2 id="inst-titulo">Como instalar</h2>
+        <p class="muted" id="install-intro"></p>
+        <ol class="steps" id="install-steps"></ol>
+        <p class="tip" id="install-tip" hidden></p>
+        <p class="muted small">O Roblox Studio roda no Windows e no macOS. No celular você pode conferir as informações, mas a instalação é feita no computador.</p>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section section--alt" aria-labelledby="faq-titulo">
+      <div class="wrap faq">
+        <h2 id="faq-titulo">Perguntas frequentes</h2>
+        <details>
+          <summary>O Voltix é gratuito mesmo?</summary>
+          <p>Sim. Não há cadastro, login, sistema de key ou versão paga.</p>
+        </details>
+        <details data-faq="ads" hidden>
+          <summary>Por que existe uma etapa antes do download?</summary>
+          <p data-faq-text></p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <span>© <span data-year></span> Voltix. Projeto independente, sem vínculo com a Roblox Corporation.</span>
+      <nav aria-label="Rodapé"><a href="/versoes">Versões</a><a href="/privacidade">Privacidade</a></nav>
+    </div>
+  </footer>
+
+  <!-- JANELA DE DOWNLOAD (oferta de anúncio) -->
+  <div class="modal" id="download-modal" role="dialog" aria-modal="true" aria-labelledby="dl-title" hidden>
+    <div class="modal__backdrop" data-close></div>
+    <div class="modal__panel" tabindex="-1">
+      <button class="modal__x" type="button" data-close aria-label="Fechar">×</button>
+      <span class="ad-label">Oferta de anúncio</span>
+      <h2 id="dl-title">Baixar Voltix <span data-current="version"></span></h2>
+      <p class="muted" id="dl-intro">
+        Para liberar o download, você pode assistir a um anúncio curto em tela cheia.
+        Ele só começa quando você clicar em <strong>Assistir anúncio</strong>, e você não precisa clicar no anúncio.
+      </p>
+
+      <div class="ad-stage" id="ad-stage" hidden></div>
+
+      <p class="dl-status" id="dl-status" role="status" aria-live="polite"></p>
+
+      <div class="modal__actions">
+        <button class="btn btn--primary" id="dl-watch" type="button" hidden disabled>Assistir anúncio</button>
+        <button class="btn btn--ghost" id="dl-retry" type="button" hidden>Tentar de novo</button>
+        <a class="btn btn--primary" id="dl-locker" href="#" target="_blank" rel="noopener noreferrer" hidden>Continuar para o LootLabs ↗</a>
+        <a class="btn btn--primary" id="dl-file" href="#" download hidden>Baixar arquivo</a>
+        <button class="btn btn--ghost" id="dl-skip" type="button" hidden>Baixar sem anúncio</button>
+        <button class="btn btn--ghost" id="dl-cancel" type="button" data-close>Agora não</button>
+      </div>
+      <p class="muted small" id="dl-file-info" hidden></p>
+    </div>
+  </div>
+
+  <noscript><p class="wrap notice">Ative o JavaScript para ver as informações e baixar o Voltix.</p></noscript>
+  <script type="module" src="/js/home.js"></script>
+</body>
+</html>

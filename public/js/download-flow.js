@@ -122,7 +122,7 @@ export function initDownloadFlow({ ads, version, openButton }) {
   // nova aba somente quando o visitante clica.
 
   lockerLink.addEventListener('click', () => {
-    setStatus('ok', 'O LootLabs abriu em outra aba. Ao terminar as etapas de lá, o download começa.');
+    setStatus('ok', 'O LootLabs abriu em outra aba. Ao terminar as etapas de lá, você volta para a página de download do Voltix.');
     cancelBtn.textContent = 'Fechar';
   });
 
@@ -140,7 +140,7 @@ export function initDownloadFlow({ ads, version, openButton }) {
     }
     intro.hidden = false;
     intro.textContent = 'O download passa pelo LootLabs, um site parceiro que ajuda a manter o Voltix. ' +
-      'Lá podem aparecer tarefas de anunciantes antes do arquivo. ' +
+      'Lá podem aparecer tarefas de anunciantes. No fim, você volta para cá e clica em Baixar Voltix. ' +
       'Não instale programas nem ative notificações que você não reconheça.';
     lockerLink.href = url;
     view({ message: 'O link abre em uma nova aba.' });

@@ -63,7 +63,7 @@ O LootLabs é um "link locker": o visitante clica em **Baixar Voltix**, vê um a
 **Passo a passo** (o site precisa estar no ar antes):
 
 1. Copie o endereço público do arquivo. Exemplo:
-   `https://voltix-xxxx.onrender.com/downloads/Voltix-1.0.0.exe`
+   `https://voltix-xxxx.onrender.com/downloads/Voltix-Setup-1.0.0.exe`
 2. No painel do [LootLabs](https://lootlabs.gg), crie um link novo usando esse endereço como destino e escolha quantas tarefas quer.
 3. Copie o link gerado (algo como `https://loot-link.com/s?xxxx`).
 4. Cole em `config/versions.json`, no campo `lootlabsUrl` da versão:
@@ -145,7 +145,8 @@ Os pontos do código para integrar outro provedor estão marcados com **`>>> INT
 ---
 
 ## 6. Arquivo .exe
-- Coloque o programa em `downloads/` com o nome `Voltix-1.0.0.exe` (ou o nome que estiver em `url` no `versions.json`). Enquanto o arquivo não existir, o botão **Baixar Voltix** fica desativado.
+- Coloque o instalador em `downloads/` com o nome `Voltix-Setup-1.0.0.exe` (ou o nome que estiver em `url` no `versions.json`). Enquanto o arquivo não existir, o botão **Baixar Voltix** fica desativado.
+- **Importante:** o arquivo precisa ser o **instalador completo** (`Voltix-Setup-1.0.0.exe`, gerado pelo Inno Setup), nunca o `Voltix.exe` solto — o Electron precisa de `ffmpeg.dll`, `locales/`, `resources/app.asar` etc., e sem eles o Windows mostra o erro "Não foi possível encontrar o ffmpeg.dll".
 - **Limite do GitHub:** pelo site do GitHub dá para enviar arquivos de até 25 MB, e o Git recusa arquivos acima de 100 MB. Se o `.exe` for maior, publique em **GitHub Releases** (no repositório: **Releases → Create a new release**, anexe o `.exe`). Depois, use o link do arquivo da release no campo `url` e escreva o tamanho em `size`, por exemplo `"48 MB"`.
 - **Aviso do Windows (SmartScreen):** programas sem assinatura digital mostram "O Windows protegeu o computador". Para o aviso sumir, assine o `.exe` com um certificado de assinatura de código.
 - **Antes de publicar cada versão**, envie o `.exe` ao [VirusTotal](https://www.virustotal.com) e confira se ele está limpo. Gere o `.exe` num computador sem vírus, porque um PC infectado pode infectar o programa que você distribui.
